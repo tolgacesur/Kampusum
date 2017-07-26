@@ -1,0 +1,137 @@
+<div class='content-wrapper' ng-init="app.settings.pagetitle = 'Personel Ekle';">
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" ng-controller="addStaff">
+        <section class="box ">
+            <header class="panel_header">
+                <h2 class="title pull-left">Personel Kayıt</h2>
+                <div class="actions panel_actions pull-right">
+                    <i class="box_toggle material-icons"></i>
+                    <i class="box_setting material-icons" ng-click="section_modal()"></i>
+                    <i class="box_close material-icons">kapat</i>
+                </div>
+            </header>
+            <div class="content-body padding-bottom-0">
+                <div class="row">
+                <form  ng-submit="submit()" id="form">
+                    <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Ad ve Soyad</label>
+                            <span class="desc"></span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-1" ng-model="staff.name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-5">Bölüm</label>
+                            <span class="desc"></span>
+                            <div class="input-group" inputgroup>
+                                <select class="form-control " ng-model="staff.department">
+                                    <option></option>
+                                    <option>Makine Mühendisliği</option>
+                                    <option>Bilgisayar Mühendisliği</option>
+                                    <option>Endüstri Mühendisliği</option>
+                                    <option>Mekatronik Mühendisliği</option>
+                                    <option>Tıp</option>
+                                    <option>Hemşirelik</option>
+                                    <option>İşletme</option>
+                                    <option>Türk Dili ve Edebiyatı</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Pozisyon</label>
+                            <span class="desc"></span>
+                            <div class="controls">
+                                <input type="text" value="" class="form-control" id="field-1" ng-model="staff.position">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-5">Doğum Tarihi</label>
+                            <span class="desc">örn. "04/03/2015"</span>
+                            <div class="controls">
+                                <input type="text" ui-mask="99/99/9999" placeholder="GG/AA/YYYY" class="form-control" ng-model="staff.birthday" ng-model="mask11" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-5">Cinsiyet</label>
+                            <span class="desc"></span>
+                            <div class="input-group" inputgroup >
+                                <select class="form-control " ng-model='staff.sex'>
+                                    <option></option>
+                                    <option>Bay</option>
+                                    <option>Bayan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-6">Açıklama</label>
+                            <span class="desc">"Bir açıklama giriniz."</span>
+                            <div class="controls">
+                                <textarea class="form-control" cols="5" id="field-6" ng-model="staff.brief"></textarea>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <label class="form-label" for="field-1">Email</label>
+                            <span class="desc"></span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-3" ng-model="staff.email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-2">Telefon</label>
+                            <span class="desc">örn. "(534) 253-5353"</span>
+                            <div class="controls">
+                                <input type="text" ng-model="staff.phone" ui-mask="(999) 999-9999" placeholder="(999) 999-9999" class="form-control" ng-model="mask1" required>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="form-label" for="field-1">Websitesi</label>
+                            <span class="desc"></span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-3" ng-model="staff.url">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-2">Parola</label>
+                            <span class="desc"></span>
+                            <div class="controls">
+                                <input type="password" value="" class="form-control" id="field-2" ng-model="staff.parola">
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Facebook URL</label>
+                                <span class="desc"></span>
+                                <div class="controls">
+                                    <input type="text" class="form-control" placeholder="http://www.facebook.com/KullanıcıAdı" id="field-31" ng-model="staff.facebook">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Twitter URL</label>
+                                <span class="desc"></span>
+                                <div class="controls">
+                                    <input type="text" class="form-control" placeholder="http://www.twitter.com/KullanıcıAdı" id="field-41" ng-model="staff.twitter">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Google Plus URL</label>
+                                <span class="desc"></span>
+                                <div class="controls">
+                                    <input type="text" class="form-control" placeholder="http://www.plus.google.com/KullanıcıAdı" id="field-51" ng-model="staff.google">
+                                </div>
+                            </div>
+
+
+                    </div>
+
+                        <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12 padding-bottom-30">
+                            <div class="text-left">
+                                <button type="submit" class="btn btn-primary">Kaydet</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

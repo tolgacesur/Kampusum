@@ -1,0 +1,95 @@
+<div class='content-wrapper' ng-init="app.settings.pagetitle = 'Ders Ekle';">
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" ng-controller="addCourse">
+        <section class="box ">
+            <header class="panel_header">
+                <h2 class="title pull-left">Ders Bilgileri</h2>
+                <div class="actions panel_actions pull-right">
+                    <i class="box_toggle material-icons"></i>
+                    <i class="box_setting material-icons" ng-click="section_modal()"></i>
+                    <i class="box_close material-icons">kapat</i>
+                </div>
+            </header>
+            <div class="content-body padding-bottom-0">
+                <div class="row">
+                <form action ="#" method="post">
+                    <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Ders Adı</label>
+                            <span class="desc"></span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-1" ng-model="course.name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-5">Başlangıç</label>
+                            <span class="desc">örn. "04/03/2015"</span>
+                            <div class="controls">
+                                <input type="text" ng-model="course.start" name="masked" ui-mask="99/99/9999" placeholder="MM/DD/YYYY" class="form-control" ng-model="mask11" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Ders Süresi</label>
+                            <span class="desc">Örn: 6 Ay</span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-1" ng-model="course.timelength">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Ders Ücreti</label>
+                            <span class="desc">Örn: Ücretsiz, 400 TL</span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-1" ng-model="course.price">
+                            </div>
+                        </div>                        
+
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Eğitimci</label>
+                            <span class="desc">Örn: Prof. Tolga Cesur</span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-1" ng-model="course.professor">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Ders Resmi</label>
+                            <span class="desc"></span>
+                            <div class="controls">
+                                <input type="file" class="form-control" id="field-5" ng-model="course.image">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-5">Bölüm</label>
+                            <span class="desc"></span>
+                            <div class="input-group" inputgroup>
+                                <select class="form-control " ng-model="course.department">
+                                    <option></option>
+                                    <option>Makine Mühendisliği</option>
+                                    <option>Bilgisayar Mühendisliği</option>
+                                    <option>Endüstri Mühendisliği</option>
+                                    <option>Mekatronik Mühendisliği</option>
+                                    <option>Tıp</option>
+                                    <option>Hemşirelik</option>
+                                    <option>İşletme</option>
+                                    <option>Türk Dili ve Edebiyatı</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="field-1">Yıl</label>
+                            <span class="desc">Örn: 4. Sınıf</span>
+                            <div class="controls">
+                                <input type="text" class="form-control" id="field-1" ng-model="course.year">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12 padding-bottom-30">
+                            <div class="text-left">
+                                <button type="button" class="btn btn-primary">Kaydet</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
